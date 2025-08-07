@@ -25,6 +25,18 @@ app.get('/api/foods', async (req, res) => {
   }
 });
 
+app.get('/api/categories', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT * FROM categories');
+    res.json(result.rows);
+  } catch (err) {
+    console.error('Errore nel recupero delle categorie:', err);
+    res.status(500).json({ error: 'Errore nel recupero delle categorie' });
+  }
+});
+
+
+
 app.post('/api/nutrients', async (req, res) => {
   const selections = req.body; // [{ id: 1, qty: 200 }, ...]
   try {
