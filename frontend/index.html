@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>FoodTrack</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FoodTrack 🍏</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>Lista Alimenti</h1>
-  <ul id="food-list"></ul>
+  <div class="container">
+    <h1>FoodTrack 🍏</h1>
+
+    <label for="categoryFilter"><strong>Filtra per categoria:</strong></label>
+    <select id="categoryFilter">
+      <option value="all">Tutte</option>
+    </select>
+
+    <h2>Alimenti disponibili</h2>
+    <ul id="food-list"></ul>
+
+    <h2>Selezionati</h2>
+    <ul id="selected-list"></ul>
+
+    <div id="totals">
+      Totale: 0 kcal | Proteine: 0g | Carboidrati: 0g | Grassi: 0g
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
